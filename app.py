@@ -13,3 +13,8 @@ def contato():
 @app.route("/html")
 def html():
     return render_template("index.html")
+
+@app.route("/usuario")
+def usuario():
+    nome_pessoa = "Cesar Augusto Andrade Ferreira"
+    return render_template("index.html", nome = nome_pessoa)
