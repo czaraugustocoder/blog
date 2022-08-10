@@ -1,3 +1,5 @@
 Site para treinar html 
 https://developer.mozilla.org/pt-BR/docs/Web/HTML
 https://www.w3schools.com/html/
+https://github.com/Danilo-Miguel/blog
+

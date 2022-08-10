@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask("Hello")
 
@@ -12,12 +12,4 @@ def contato():
 
 @app.route("/html")
 def html():
-    return """<html>
-        <head>
-            <title> Agenda Do Governo </title>
-        </head>
-        <body>
-            <h1>Lista de Contatos das Entidades Administrativas do Estado do Amazonas</h1>
-        </body>
-    </html>
-    """
+    return render_template("index.html")
