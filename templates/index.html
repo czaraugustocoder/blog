@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
     {% block content %}
-        <a href="https://casacivil.manaus.am.gov.br/">Click para ir para a sede do Governo do Estado</a>
-        <h1>{{nome}}</h1> 
-        <h1>Lista de Contatos das Entidades Administrativas do Estado do Amazonas</h1>
-
-    {% endblock %}
+        {% for posts in posts %}
+            <article class="post">
+                <header>
+                    <div>
+                        <h1>{{ posts.title }}</h1>
+                    <div class="about"> Criado por {{ posts['author'] }} em {{ posts['created'].strftime('%Y-%m-%d') }}</div>
+                    </div>
+                </header>
+                <p class="body"> {{ posts['body'] }}</p>
+            </article>
+            {% if not loop.last %}
+            <hr>
+            {% endif %}
+        {% endfor %}
+    {% endblock%}
